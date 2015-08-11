@@ -9,18 +9,18 @@
         <title>Clipboard | Getting shit done since 1921...again </title>
 
         <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css">
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 	</head>
-	<body>
-		<header>
-			<h1>Clipboard</h1>
+	<body ng-controller="MainController as mainCtrl">
+		<header ng-show="mainCtrl.show">
+			<h1>{{ mainCtrl.list.title }}</h1>
 		</header>
 
-		<section>
-			<form>
-				<input type="text" name="new">
-			</form>
-		</section>
+		<form ng-hide="mainCtrl.show" ng-submit="mainCtrl.addTitle()">
+			<input ng-model="mainCtrl.newTitle" type="text" name="new" placeholder="Enter a title" >
+			<input type="submit">
+		</form>
 
 		<script type="text/javascript" src="js/app.js"></script>
 	</body>
