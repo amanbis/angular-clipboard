@@ -12,6 +12,12 @@
 		};
 	});
 
-	var lists = { title: 'Hi' };
+	var lists = { 
+		title: 'Hi',
+		tasks: {
+			task1: 'Finish website',
+			task2: 'Finish this app'	
+		} 
+	};
 
 })();

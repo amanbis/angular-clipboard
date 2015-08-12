@@ -22,6 +22,10 @@
 			<input type="submit">
 		</form>
 
+		<form ng-repeat="task in mainCtrl.list.tasks">
+			<input type="checkbox" name="taskList">{{ task }}
+		</form>
+
 		<script type="text/javascript" src="js/app.js"></script>
 	</body>
 </html>
