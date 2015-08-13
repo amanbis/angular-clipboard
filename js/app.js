@@ -15,6 +15,10 @@
 			this.list.count++;
 			this.list.tasks['task' + this.list.count] = this.newTask;
 		};
+
+		this.removeTask = function(task) {
+			alert(task);
+		};
 	});
 
 	var lists = { 

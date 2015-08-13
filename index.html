@@ -37,7 +37,7 @@
 			</form>
 
 			<form ng-repeat="task in mainCtrl.list.tasks">
-				<input type="checkbox" name="task">{{task}}
+				<input ng-click="mainCtrl.removeTask(task)" type="checkbox" name="task">{{task}}
 			</form>
 		</section>
 
