@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html ng-app="clipboard">
 	<head>
-		 <meta charset="UTF-8" />
-        <meta name="viweport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8" />
+        <meta name="viewport" content="initial-scale=1.0" />
         <meta name="author" content="Aman Biswas" />
         <meta name="description" content="To-do list made in Angular" />
 
@@ -40,6 +40,10 @@
 				<input ng-click="mainCtrl.removeTask(task)" type="checkbox" name="task">{{task}}
 			</form>
 		</section>
+
+		<div ng-repeat="game in mainCtrl.games">
+			<p>{{game}}</p>
+		</div>
 
 		<script type="text/javascript" src="js/app.js"></script>
 	</body>

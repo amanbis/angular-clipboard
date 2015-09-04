@@ -6,6 +6,8 @@
 		this.newTitle = '';
 		this.newTask = '';
 
+		this.games = videogames;
+
 		this.addTitle = function() {
 			this.list.title = this.newTitle;
 			this.list.active = true;
@@ -17,7 +19,7 @@
 		};
 
 		this.removeTask = function(task) {
-			alert(task);
+			console.log(task);
 		};
 	});
 
@@ -27,5 +29,11 @@
 		active: false,
 		count: 0
 	};
+
+	var videogames = [
+		"Mass Effect",
+		"Mass Effect 2",
+		"Mass Effect 3"
+	];
 
 })();
