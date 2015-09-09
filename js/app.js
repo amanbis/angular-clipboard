@@ -8,6 +8,8 @@
 
 		this.games = videogames;
 
+		this.checklist = checklists;
+
 		this.addTitle = function() {
 			this.list.title = this.newTitle;
 			this.list.active = true;
@@ -34,6 +36,27 @@
 		"Mass Effect",
 		"Mass Effect 2",
 		"Mass Effect 3"
+	];
+
+	var checklists = [
+		{
+			title: "Videogames",
+			tasks: [
+				"Mass Effect",
+				"Mass Effect 2",
+				"Mass Effect 3"
+			],
+			active: false
+		},
+		{
+			title: "Books",
+			tasks: [
+				"The Count of Monte Cristo",
+				"Never Let Me Go",
+				"The Colorless Tsukuru Tazaki"
+			],
+			active: false
+		}
 	];
 
 })();

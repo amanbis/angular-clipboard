@@ -13,34 +13,16 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 	</head>
 	<body ng-controller="MainController as mainCtrl">
-		<p>{{mainCtrl.list.active}}</p>
-		<p ng-show="mainCtrl.list.active">visible</p>
-		<p>{{mainCtrl.list.count}}</p>
-
-		<header ng-show="mainCtrl.list.active">
-			<h1>{{mainCtrl.newTitle}}</h1>
-			<!--<h1>{{mainCtrl.list.title}}</h1>-->
-		</header>
-
-		<form ng-hide="mainCtrl.list.active" ng-submit="mainCtrl.addTitle()">
-			<input ng-model="mainCtrl.newTitle" type="text" name="newTitle" placeholder="Add a title">
-			<input type="submit">
-		</form>
-
-		<!--<section>
-			<h3>{{mainCtrl.newTask}}</h3>
-		</section>-->
-		<section ng-show="mainCtrl.list.active">
-			<form ng-submit="mainCtrl.addTask()">
-				<input ng-model="mainCtrl.newTask" type="text" name="newTask" placeholder="Add a to-do item">
-				<input type="submit">
-			</form>
-
-			<form ng-repeat="task in mainCtrl.list.tasks">
+		<div ng-repeat="list in mainCtrl.checklist">
+			<h1>{{list.title}}</h1>
+			<form ng-repeat="task in list.tasks">
 				<input ng-click="mainCtrl.removeTask(task)" type="checkbox" name="task">{{task}}
 			</form>
-		</section>
+		</div>
 
+		<div ng-repeat="game in mainCtrl.games">
+			<p>{{game}}</p>
+		</div>
 
 		<script type="text/javascript" src="js/app.js"></script>
 	</body>
