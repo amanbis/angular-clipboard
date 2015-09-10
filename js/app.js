@@ -6,9 +6,16 @@
 		this.newTitle = '';
 		this.newTask = '';
 
-		this.games = videogames;
-
 		this.checklist = checklists;
+		this.tab = 1;
+
+		this.selectTab = function(setTab) {
+			this.tab = setTab;
+		};
+
+		this.isSelected = function(checkTab) {
+			return this.tab === checkTab;
+		};
 
 		this.addTitle = function() {
 			this.list.title = this.newTitle;
@@ -32,14 +39,9 @@
 		count: 0
 	};
 
-	var videogames = [
-		"Mass Effect",
-		"Mass Effect 2",
-		"Mass Effect 3"
-	];
-
 	var checklists = [
 		{
+			id: 1,
 			title: "Videogames",
 			tasks: [
 				"Mass Effect",
@@ -49,6 +51,7 @@
 			active: false
 		},
 		{
+			id: 2,
 			title: "Books",
 			tasks: [
 				"The Count of Monte Cristo",
