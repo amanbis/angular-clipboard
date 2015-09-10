@@ -25,7 +25,8 @@
 		this.addTask = function(listObj) {
 			/*this.list.count++;
 			this.list.tasks['task' + this.list.count] = this.newTask;*/
-			listObj.tasks.push(this.newTask);
+			var item = this.newTask;
+			listObj.tasks.push(item);
 		};
 
 		this.removeTask = function(task) {

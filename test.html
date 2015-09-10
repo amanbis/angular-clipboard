@@ -30,7 +30,7 @@
 					<input type="submit">
 				</form>
 
-				<form ng-repeat="task in list.tasks">
+				<form ng-repeat="task in list.tasks track by $index">
 					<input ng-click="mainCtrl.removeTask(task)" type="checkbox" name="task" id="item">{{task}}
 				</form>
 			</div>
