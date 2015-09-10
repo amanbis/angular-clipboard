@@ -24,8 +24,14 @@
 		<div ng-repeat="list in mainCtrl.checklist">
 			<div ng-show="mainCtrl.isSelected(list.id)">
 				<h1>{{list.title}}</h1>
+
+				<form ng-submit="mainCtrl.addTask(list)">
+					<input ng-model="mainCtrl.newTask" type="text" name="newTask" placeholder="Add a to-do item">
+					<input type="submit">
+				</form>
+
 				<form ng-repeat="task in list.tasks">
-					<input ng-click="mainCtrl.removeTask(task)" type="checkbox" name="task">{{task}}
+					<input ng-click="mainCtrl.removeTask(task)" type="checkbox" name="task" id="item">{{task}}
 				</form>
 			</div>
 		</div>

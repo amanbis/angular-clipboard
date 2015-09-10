@@ -22,9 +22,10 @@
 			this.list.active = true;
 		};
 
-		this.addTask = function() {
-			this.list.count++;
-			this.list.tasks['task' + this.list.count] = this.newTask;
+		this.addTask = function(listObj) {
+			/*this.list.count++;
+			this.list.tasks['task' + this.list.count] = this.newTask;*/
+			listObj.tasks.push(this.newTask);
 		};
 
 		this.removeTask = function(task) {
