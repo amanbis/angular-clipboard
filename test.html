@@ -19,6 +19,10 @@
 			</li>
 		</div>
 
+		<li>
+			<a href="#" ng-click="mainCtrl.newList"><h3>Create New List</h3></a>
+		</li>
+
 		<p>tab: {{mainCtrl.tab}}</p>
 
 		<div ng-repeat="list in mainCtrl.checklist">
@@ -31,7 +35,7 @@
 				</form>
 
 				<form ng-repeat="task in list.tasks track by $index">
-					<input ng-click="mainCtrl.removeTask(task)" type="checkbox" name="task" id="item">{{task}}
+					<label><input ng-model="task" type="checkbox" name="task" id="item">{{task}}</label>
 				</form>
 			</div>
 		</div>

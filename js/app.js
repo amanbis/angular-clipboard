@@ -17,6 +17,18 @@
 			return this.tab === checkTab;
 		};
 
+		this.newList = function() {
+			var woah = {
+				id: 3,
+				title: "uhhhh",
+				tasks: [],
+				active: false
+			};
+
+			this.checklist.push(woah);
+			this.selectTab(3);
+		};
+
 		this.addTitle = function() {
 			this.list.title = this.newTitle;
 			this.list.active = true;
@@ -27,6 +39,7 @@
 			this.list.tasks['task' + this.list.count] = this.newTask;*/
 			var item = this.newTask;
 			listObj.tasks.push(item);
+			this.newTask = '';
 		};
 
 		this.removeTask = function(task) {
