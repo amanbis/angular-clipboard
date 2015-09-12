@@ -13,7 +13,7 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 	</head>
 	<body ng-controller="MainController as mainCtrl">
-		<div class="tabs" ng-repeat="list in mainCtrl.checklist">
+		<div class="tabs" ng-repeat="list in mainCtrl.checklist track by $index">
 			<li ng-class="{ active: mainCtrl.isSelected(list.id) }">
 				<a href="#" ng-click="mainCtrl.selectTab(list.id)"><h3>{{list.title}}</h3></a>
 			</li>
@@ -27,7 +27,13 @@
 
 		<div ng-repeat="list in mainCtrl.checklist">
 			<div ng-show="mainCtrl.isSelected(list.id)">
-				<h1>{{list.title}}</h1>
+
+				<form ng-hide="list.active" ng-submit="mainCtrl.addTitle()">
+					<input ng-model="mainCtrl.newTitle" type="text" name="newTitle" placeholder="Add a title">
+					<input type="submit">
+				</form>
+				
+				<h1 ng-show="list.active">{{list.title}}</h1>
 
 				<form ng-submit="mainCtrl.addTask(list)">
 					<input ng-model="mainCtrl.newTask" type="text" name="newTask" placeholder="Add a to-do item">

@@ -19,6 +19,7 @@
 		};
 
 		this.addList = function() {
+			this.nList.id = this.checklist.length + 1;
 			this.checklist.push(this.nList);
 			this.selectTab(this.nList.id);
 			console.log(this.checklist);
@@ -50,13 +51,9 @@
 	};
 
 	var newList = { 
-		id: 3,
-		title: "Songs",
-		tasks: [
-			"Farewell and Into the Inevitable",
-			"An End Once and For All",
-			"Liara's Theme/Vigil"
-		],
+		id: 0,
+		title: "New List",
+		tasks: [],
 		active: false
 	};
 
@@ -69,7 +66,7 @@
 				"Mass Effect 2",
 				"Mass Effect 3"
 			],
-			active: false
+			active: true
 		},
 		{
 			id: 2,
@@ -79,7 +76,17 @@
 				"Never Let Me Go",
 				"The Colorless Tsukuru Tazaki"
 			],
-			active: false
+			active: true
+		},
+		{
+			id: 3,
+			title: "Songs",
+			tasks: [
+				"Farewell and Into the Inevitable",
+				"An End Once and For All",
+				"Liara's Theme/Vigil"
+			],
+			active: true
 		}
 	];
 
