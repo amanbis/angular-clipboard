@@ -8,6 +8,7 @@
 
 		this.checklist = checklists;
 		this.tab = 1;
+		this.nList = newList;
 
 		this.selectTab = function(setTab) {
 			this.tab = setTab;
@@ -17,16 +18,10 @@
 			return this.tab === checkTab;
 		};
 
-		this.newList = function() {
-			var woah = {
-				id: 3,
-				title: "uhhhh",
-				tasks: [],
-				active: false
-			};
-
-			this.checklist.push(woah);
-			this.selectTab(3);
+		this.addList = function() {
+			this.checklist.push(this.nList);
+			this.selectTab(this.nList.id);
+			console.log(this.checklist);
 		};
 
 		this.addTitle = function() {
@@ -52,6 +47,17 @@
 		tasks: {},
 		active: false,
 		count: 0
+	};
+
+	var newList = { 
+		id: 3,
+		title: "Songs",
+		tasks: [
+			"Farewell and Into the Inevitable",
+			"An End Once and For All",
+			"Liara's Theme/Vigil"
+		],
+		active: false
 	};
 
 	var checklists = [
