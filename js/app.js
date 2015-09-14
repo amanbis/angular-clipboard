@@ -25,9 +25,9 @@
 			console.log(this.checklist);
 		};
 
-		this.addTitle = function() {
-			this.list.title = this.newTitle;
-			this.list.active = true;
+		this.addTitle = function(listObj) {
+			listObj.title = this.newTitle;
+			listObj.active = true;
 		};
 
 		this.addTask = function(listObj) {
