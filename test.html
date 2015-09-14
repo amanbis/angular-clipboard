@@ -23,7 +23,7 @@
 			<a href="#" ng-click="mainCtrl.addList()"><h3>Create New List</h3></a>
 		</li>
 
-		<p>Number of Lists: {{mainCtrl.tab}}</p>
+		<p>List tab: {{mainCtrl.tab}}</p>
 
 		<div ng-repeat="list in mainCtrl.checklist">
 			<div ng-show="mainCtrl.isSelected(list.id)">
@@ -34,6 +34,7 @@
 				</form>
 				
 				<h1 ng-show="list.active">{{list.title}}</h1>
+				
 
 				<form ng-submit="mainCtrl.addTask(list)">
 					<input ng-model="mainCtrl.newTask" type="text" name="newTask" placeholder="Add a to-do item">

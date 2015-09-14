@@ -8,7 +8,7 @@
 
 		this.checklist = checklists;
 		this.tab = 1;
-		this.nList = newList;
+		this.newList = {};
 
 		this.selectTab = function(setTab) {
 			this.tab = setTab;
@@ -19,15 +19,24 @@
 		};
 
 		this.addList = function() {
-			this.nList.id = this.checklist.length + 1;
-			this.checklist.push(this.nList);
-			this.selectTab(this.nList.id);
+			this.newList = { 
+				id: 0,
+				title: "New List",
+				tasks: [],
+				active: false
+			};
+
+			this.newList.id = this.checklist.length + 1;
+			this.checklist.push(this.newList);
+			this.selectTab(this.newList.id);
 			console.log(this.checklist);
 		};
 
 		this.addTitle = function(listObj) {
+			console.log(listObj);
 			listObj.title = this.newTitle;
 			listObj.active = true;
+			this.newTitle = "";
 		};
 
 		this.addTask = function(listObj) {
@@ -48,13 +57,6 @@
 		tasks: {},
 		active: false,
 		count: 0
-	};
-
-	var newList = { 
-		id: 0,
-		title: "New List",
-		tasks: [],
-		active: false
 	};
 
 	var checklists = [
