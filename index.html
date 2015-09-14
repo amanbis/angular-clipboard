@@ -13,34 +13,41 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 	</head>
 	<body ng-controller="MainController as mainCtrl">
-		<p>{{mainCtrl.list.active}}</p>
-		<p ng-show="mainCtrl.list.active">visible</p>
-		<p>{{mainCtrl.list.count}}</p>
+		<div class="tabs" ng-repeat="list in mainCtrl.checklist track by $index">
+			<li ng-class="{ active: mainCtrl.isSelected(list.id) }">
+				<a href="#" ng-click="mainCtrl.selectTab(list.id)"><h3>{{list.title}}</h3></a>
+			</li>
+		</div>
 
-		<header ng-show="mainCtrl.list.active">
-			<h1>{{mainCtrl.newTitle}}</h1>
-			<!--<h1>{{mainCtrl.list.title}}</h1>-->
-		</header>
+		<li>
+			<a href="#" ng-click="mainCtrl.addList()"><h3>Create New List</h3></a>
+		</li>
 
-		<form ng-hide="mainCtrl.list.active" ng-submit="mainCtrl.addTitle()">
-			<input ng-model="mainCtrl.newTitle" type="text" name="newTitle" placeholder="Add a title">
-			<input type="submit">
-		</form>
+		<p>List tab: {{mainCtrl.tab}}</p>
 
-		<!--<section>
-			<h3>{{mainCtrl.newTask}}</h3>
-		</section>-->
-		<section ng-show="mainCtrl.list.active">
-			<form ng-submit="mainCtrl.addTask()">
-				<input ng-model="mainCtrl.newTask" type="text" name="newTask" placeholder="Add a to-do item">
-				<input type="submit">
-			</form>
+		<div ng-repeat="list in mainCtrl.checklist">
+			<div ng-show="mainCtrl.isSelected(list.id)">
 
-			<form ng-repeat="task in mainCtrl.list.tasks">
-				<input ng-click="mainCtrl.removeTask(task)" type="checkbox" name="task">{{task}}
-			</form>
-		</section>
+				<form ng-hide="list.active" ng-submit="mainCtrl.addTitle(list)">
+					<input ng-model="mainCtrl.newTitle" type="text" name="newTitle" placeholder="Add a title">
+					<input type="submit">
+				</form>
+				
+				<div ng-show="list.active">
+					<h1>{{list.title}}</h1>
+					<button ng-click="mainCtrl.editTitle(list)">Edit</button>
+				</div>
 
+				<form ng-submit="mainCtrl.addTask(list)">
+					<input ng-model="mainCtrl.newTask" type="text" name="newTask" placeholder="Add a to-do item">
+					<input type="submit">
+				</form>
+
+				<form ng-repeat="task in list.tasks track by $index">
+					<label><input type="checkbox" name="task" id="item">{{task}}</label>
+				</form>
+			</div>
+		</div>
 
 		<script type="text/javascript" src="js/app.js"></script>
 	</body>
