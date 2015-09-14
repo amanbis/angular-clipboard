@@ -33,10 +33,14 @@
 		};
 
 		this.addTitle = function(listObj) {
-			console.log(listObj);
 			listObj.title = this.newTitle;
 			listObj.active = true;
 			this.newTitle = "";
+		};
+
+		this.editTitle = function(listObj) {
+			this.newTitle = listObj.title;
+			listObj.active = false;
 		};
 
 		this.addTask = function(listObj) {

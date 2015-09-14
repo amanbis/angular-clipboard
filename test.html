@@ -33,8 +33,10 @@
 					<input type="submit">
 				</form>
 				
-				<h1 ng-show="list.active">{{list.title}}</h1>
-				
+				<div ng-show="list.active">
+					<h1>{{list.title}}</h1>
+					<button ng-click="mainCtrl.editTitle(list)">Edit</button>
+				</div>
 
 				<form ng-submit="mainCtrl.addTask(list)">
 					<input ng-model="mainCtrl.newTask" type="text" name="newTask" placeholder="Add a to-do item">
