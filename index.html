@@ -28,7 +28,7 @@
 		<div ng-repeat="list in mainCtrl.checklist">
 			<div ng-show="mainCtrl.isSelected(list.id)">
 
-				<form ng-hide="list.active" ng-submit="mainCtrl.addTitle(list)">
+				<form class="title" ng-hide="list.active" ng-submit="mainCtrl.addTitle(list)">
 					<input ng-model="mainCtrl.newTitle" type="text" name="newTitle" placeholder="Add a title">
 					<input type="submit">
 				</form>
@@ -39,7 +39,7 @@
 				</div>
 
 				<form ng-submit="mainCtrl.addTask(list)">
-					<input ng-model="mainCtrl.newTask" type="text" name="newTask" placeholder="Add a to-do item">
+					<input ng-model="mainCtrl.newTask" type="text" name="newTask" placeholder="Add an item in {{list.title}}">
 					<input type="submit">
 				</form>
 
