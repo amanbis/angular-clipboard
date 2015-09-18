@@ -5,6 +5,7 @@
 		this.list = lists;
 		this.newTitle = '';
 		this.newTask = '';
+		this.taskID = 9;
 
 		this.checklist = checklists;
 		this.tab = 1;
@@ -46,13 +47,18 @@
 		this.addTask = function(listObj) {
 			/*this.list.count++;
 			this.list.tasks['task' + this.list.count] = this.newTask;*/
-			var item = this.newTask;
+			this.taskID++;
+			var item = { id: this.taskID, description: this.newTask };
 			listObj.tasks.push(item);
 			this.newTask = '';
 		};
 
 		this.removeTask = function(task) {
 			console.log(task);
+		};
+
+		this.selectTask = {
+			checked: {}
 		};
 	});
 
@@ -68,9 +74,9 @@
 			id: 1,
 			title: "Videogames",
 			tasks: [
-				"Mass Effect",
-				"Mass Effect 2",
-				"Mass Effect 3"
+				{ id: 1, description: "Mass Effect" },
+				{ id: 2, description: "Mass Effect 2" },
+				{ id: 3, description: "Mass Effect 3"}
 			],
 			active: true
 		},
@@ -78,9 +84,9 @@
 			id: 2,
 			title: "Books",
 			tasks: [
-				"The Count of Monte Cristo",
-				"Never Let Me Go",
-				"The Colorless Tsukuru Tazaki"
+				{ id: 4, description: "The Count of Monte Cristo" },
+				{ id: 5, description: "Never Let Me Go" },
+				{ id: 6, description: "The Colorless Tsukuru Tazaki"}
 			],
 			active: true
 		},
@@ -88,9 +94,9 @@
 			id: 3,
 			title: "Songs",
 			tasks: [
-				"Farewell and Into the Inevitable",
-				"An End Once and For All",
-				"Liara's Theme/Vigil"
+				{ id: 7, description: "Farewell and Into the Inevitable" },
+				{ id: 8, description: "An End Once and For All" },
+				{ id: 9, description: "Liara's Theme/Vigil" }
 			],
 			active: true
 		}
