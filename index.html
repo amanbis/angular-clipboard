@@ -44,7 +44,7 @@
 				</form>
 
 				<form ng-repeat="task in list.tasks track by $index">
-					<label><input ng-model="mainCtrl.selectTask.checked[task.id]" type="checkbox" name="task" id="item">{{task.description}}</label>
+					<label ng-class="{ active: mainCtrl.selectTask.checked[task.id] }"><input ng-model="mainCtrl.selectTask.checked[task.id]" ng-click="mainCtrl.removeTask(list, task)" type="checkbox" name="task" id="item">{{task.description}}</label>
 				</form>
 				{{ mainCtrl.selectTask }}
 			</div>

@@ -24,6 +24,7 @@
 				id: 0,
 				title: "New List",
 				tasks: [],
+				completed: [],
 				active: false
 			};
 
@@ -53,8 +54,14 @@
 			this.newTask = '';
 		};
 
-		this.removeTask = function(task) {
+		this.removeTask = function(list, task) {
 			console.log(task);
+			console.log(this.selectTask.checked[task.id]);
+			console.log(list.tasks.indexOf(task));
+			var index = list.tasks.indexOf(task);
+			list.completed.push(task);
+			list.tasks.splice(index, 1);
+			console.log(list.completed);
 		};
 
 		this.selectTask = {
@@ -78,6 +85,7 @@
 				{ id: 2, description: "Mass Effect 2" },
 				{ id: 3, description: "Mass Effect 3"}
 			],
+			completed: [],
 			active: true
 		},
 		{
@@ -88,6 +96,7 @@
 				{ id: 5, description: "Never Let Me Go" },
 				{ id: 6, description: "The Colorless Tsukuru Tazaki"}
 			],
+			completed: [],
 			active: true
 		},
 		{
@@ -98,6 +107,7 @@
 				{ id: 8, description: "An End Once and For All" },
 				{ id: 9, description: "Liara's Theme/Vigil" }
 			],
+			completed: [],
 			active: true
 		}
 	];
