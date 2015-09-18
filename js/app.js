@@ -54,14 +54,18 @@
 			this.newTask = '';
 		};
 
-		this.removeTask = function(list, task) {
-			console.log(task);
-			console.log(this.selectTask.checked[task.id]);
-			console.log(list.tasks.indexOf(task));
+		this.completeTask = function(list, task) {
 			var index = list.tasks.indexOf(task);
 			list.completed.push(task);
 			list.tasks.splice(index, 1);
 			console.log(list.completed);
+		};
+
+		this.undoComplete = function(list, complete) {
+			var index = list.completed.indexOf(complete);
+			list.tasks.push(complete);
+			list.completed.splice(index, 1);
+			console.log(list.tasks);
 		};
 
 		this.selectTask = {
