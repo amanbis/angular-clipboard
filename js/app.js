@@ -54,6 +54,11 @@
 			this.newTask = '';
 		};
 
+		this.removeTask = function(list, task) {
+			var index = list.tasks.indexOf(task);
+			list.tasks.splice(index, 1);
+		};
+
 		this.completeTask = function(list, task) {
 			var index = list.tasks.indexOf(task);
 			list.completed.push(task);
