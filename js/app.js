@@ -45,6 +45,20 @@
 			listObj.active = false;
 		};
 
+		this.removeList = function(list) {
+			var index = this.checklist.indexOf(list);
+			this.checklist.splice(index, 1);
+
+			for(var i = index; i < this.checklist.length; i++) {
+				var newID = this.checklist[i].id;
+				this.checklist[i].id = newID - 1;
+			}
+
+			if (this.tab > this.checklist.length) {
+				this.tab = this.tab - 1;
+			}
+		};
+
 		this.addTask = function(listObj) {
 			/*this.list.count++;
 			this.list.tasks['task' + this.list.count] = this.newTask;*/

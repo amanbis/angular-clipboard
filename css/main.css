@@ -4,6 +4,10 @@ h1 {
 	line-height: 1.15;
 }
 
+h3 {
+	display: inline-block;
+}
+
 .active {
 	background-color: rgba(240,90,63,0.25);
 }

@@ -16,6 +16,7 @@
 		<div class="tabs" ng-repeat="list in mainCtrl.checklist track by $index">
 			<li ng-class="{ active: mainCtrl.isSelected(list.id) }">
 				<a href="#" ng-click="mainCtrl.selectTab(list.id)"><h3>{{list.title}}</h3></a>
+				<button ng-click="mainCtrl.removeList(list)">x</button>
 			</li>
 		</div>
 
