@@ -5,7 +5,6 @@
 		this.list = lists;
 		this.newTitle = '';
 		this.newTask = '';
-		this.taskDesc = '';
 		this.taskID = 9;
 
 		this.checklist = checklists;
@@ -64,24 +63,22 @@
 			/*this.list.count++;
 			this.list.tasks['task' + this.list.count] = this.newTask;*/
 			this.taskID++;
-			var item = { id: this.taskID, description: this.newTask };
+			var item = { id: this.taskID, description: this.newTask, active: true };
 			listObj.tasks.push(item);
 			this.newTask = '';
 		};
 
 		this.editTask = function(task) {
-			this.taskDesc = task.description;
+			this.selectTask.taskDesc[task.id] = task.description;
 			task.active = false;
 		};
 
 		this.setTaskEdit = function(task) {
-			task.description = this.taskDesc;
-			this.taskDesc = '';
+			task.description = this.selectTask.taskDesc[task.id];
 			task.active = true;
 		};
 
 		this.cancelTaskEdit = function(task) {
-			this.taskDesc = '';
 			task.active = true;
 		};
 
@@ -105,7 +102,8 @@
 		};
 
 		this.selectTask = {
-			checked: {}
+			checked: {},
+			taskDesc: {}
 		};
 	});
 
