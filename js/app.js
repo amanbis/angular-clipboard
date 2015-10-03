@@ -5,6 +5,7 @@
 		this.list = lists;
 		this.newTitle = '';
 		this.newTask = '';
+		this.taskDesc = '';
 		this.taskID = 9;
 
 		this.checklist = checklists;
@@ -68,6 +69,22 @@
 			this.newTask = '';
 		};
 
+		this.editTask = function(task) {
+			this.taskDesc = task.description;
+			task.active = false;
+		};
+
+		this.setTaskEdit = function(task) {
+			task.description = this.taskDesc;
+			this.taskDesc = '';
+			task.active = true;
+		};
+
+		this.cancelTaskEdit = function(task) {
+			this.taskDesc = '';
+			task.active = true;
+		};
+
 		this.removeTask = function(list, task) {
 			var index = list.tasks.indexOf(task);
 			list.tasks.splice(index, 1);
@@ -104,9 +121,9 @@
 			id: 1,
 			title: "Videogames",
 			tasks: [
-				{ id: 1, description: "Mass Effect" },
-				{ id: 2, description: "Mass Effect 2" },
-				{ id: 3, description: "Mass Effect 3"}
+				{ id: 1, description: "Mass Effect", active: true },
+				{ id: 2, description: "Mass Effect 2", active: true },
+				{ id: 3, description: "Mass Effect 3", active: true }
 			],
 			completed: [],
 			active: true
@@ -115,9 +132,9 @@
 			id: 2,
 			title: "Books",
 			tasks: [
-				{ id: 4, description: "The Count of Monte Cristo" },
-				{ id: 5, description: "Never Let Me Go" },
-				{ id: 6, description: "The Colorless Tsukuru Tazaki"}
+				{ id: 4, description: "The Count of Monte Cristo", active: true },
+				{ id: 5, description: "Never Let Me Go", active: true },
+				{ id: 6, description: "The Colorless Tsukuru Tazaki", active: true }
 			],
 			completed: [],
 			active: true
@@ -126,9 +143,9 @@
 			id: 3,
 			title: "Songs",
 			tasks: [
-				{ id: 7, description: "Farewell and Into the Inevitable" },
-				{ id: 8, description: "An End Once and For All" },
-				{ id: 9, description: "Liara's Theme/Vigil" }
+				{ id: 7, description: "Farewell and Into the Inevitable", active: true },
+				{ id: 8, description: "An End Once and For All", active: true },
+				{ id: 9, description: "Liara's Theme/Vigil", active: true }
 			],
 			completed: [],
 			active: true
