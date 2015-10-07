@@ -19,8 +19,13 @@
 				<div class="name"></div>
 			</nav>
 		
-			<div class="content">
-				<div class="title">{{ mainCtrl.tab }}</div>
+			<div class="content" ng-class="mainBg" ng-init="mainBg = 'bamboo'">
+				<div class="title">Choose Background</div>
+				<button ng-click="mainBg = 'bamboo'">Bamboo</button>
+				<button ng-click="mainBg = 'fields'">Fields</button>
+				<button ng-click="mainBg = 'mountains'">Mountains</button>
+				<button ng-click="mainBg = 'sky'">Sky</button>
+				<button ng-click="mainBg = 'tree'">Tree</button>
 			</div>
 		</div>
 

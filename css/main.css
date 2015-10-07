@@ -32,7 +32,30 @@ nav {
 	right: 0;
 	width: 80%;
 	height: 100%;
+}
+
+.bamboo {
+	background: #f9f9f9 url("../img/bamboo.jpg") no-repeat center;
+	background-size: cover;
+}
+
+.fields {
 	background: #f9f9f9 url("../img/fields.jpg") no-repeat center;
+	background-size: cover;
+}
+
+.mountains {
+	background: #f9f9f9 url("../img/mountains.jpg") no-repeat center;
+	background-size: cover;
+}
+
+.sky {
+	background: #f9f9f9 url("../img/sky.jpg") no-repeat center;
+	background-size: cover;
+}
+
+.tree {
+	background: #f9f9f9 url("../img/tree.jpg") no-repeat center;
 	background-size: cover;
 }
 
