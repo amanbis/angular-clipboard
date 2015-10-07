@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="clipboard">
 	<head>
 		<meta charset="UTF-8" />
         <meta name="viewport" content="initial-scale=1.0" />
         <meta name="author" content="Aman Biswas" />
-        <meta name="description" content="To-do list made in Angular" />
+        <meta name="description" content="To-do list made in AngularJS" />
 
         <title>Clipboard | Getting shit done since 1921...again </title>
 
         <link rel="stylesheet" type="text/css" href="css/normalize.css" />
         <link rel="stylesheet" type="text/css" href="css/main.css">
-        <link rel="stylesheet" type="text/css" href="css/sticky.css" />
 
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 	</head>
-	<body>
-		<div class="wrapper">
-			<div class="push"></div>
+	<body ng-controller="MainController as mainCtrl">
+		<div class="main">
+			<nav>
+				<div class="name"></div>
+			</nav>
+		
+			<div class="content">
+				<div class="title">{{ mainCtrl.tab }}</div>
+			</div>
 		</div>
 
-		<footer></footer>
-		
-		<script type="text/javascript" src="app.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
 	</body>
 </html>

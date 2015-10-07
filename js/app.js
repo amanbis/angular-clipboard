@@ -11,6 +11,8 @@
 		this.tab = 1;
 		this.newList = {};
 
+		this.mainBg = '{ background: #f9f9f9 url("../img/fields.jpg") no-repeat center; background-size: cover; }';
+
 		this.selectTab = function(setTab) {
 			this.tab = setTab;
 		};
