@@ -67,13 +67,42 @@ nav {
 	background-color: rgba(249, 249, 249, 0.75);
 }
 
-footer {
-	background-color: #f3f3f3;
+.modal-bg {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(243, 243, 243, 0.75);
+	opacity: 0;
+	z-index: 999;
+	pointer-events: none;
+
+	transition: opacity 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
+.modal-bg:target {
+	opacity: 1;
+	pointer-events: auto;
+}
 
+.bg-container {
+	width: 50%;
+	height: 50%;
+	overflow: auto;
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
 
-
+.bg-content {
+	width: 50%;
+	height: 50%;
+	overflow: auto;
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
 
 h1 {
 	display: inline-block;

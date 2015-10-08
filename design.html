@@ -17,15 +17,24 @@
 		<div class="main">
 			<nav>
 				<div class="name"></div>
+				<a href="#open-bg">Change Background</a>
 			</nav>
 		
 			<div class="content" ng-class="mainBg" ng-init="mainBg = 'bamboo'">
-				<div class="title">Choose Background</div>
-				<button ng-click="mainBg = 'bamboo'">Bamboo</button>
-				<button ng-click="mainBg = 'fields'">Fields</button>
-				<button ng-click="mainBg = 'mountains'">Mountains</button>
-				<button ng-click="mainBg = 'sky'">Sky</button>
-				<button ng-click="mainBg = 'tree'">Tree</button>
+				<div class="title"></div>
+			</div>
+
+			<div id="open-bg" class="modal-bg">
+				<div class="bg-container">
+					<div class="bg-content">
+						<button ng-click="mainBg = 'bamboo'">Bamboo</button>
+						<button ng-click="mainBg = 'fields'">Fields</button>
+						<button ng-click="mainBg = 'mountains'">Mountains</button>
+						<button ng-click="mainBg = 'sky'">Sky</button>
+						<button ng-click="mainBg = 'tree'">Tree</button>
+						<a href="#close">Close</a>
+					</div>
+				</div>
 			</div>
 		</div>
 
