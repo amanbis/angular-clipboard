@@ -26,6 +26,11 @@ nav {
 	height: 4em;
 }
 
+.bottom-nav {
+	position: absolute;
+	bottom: 0;
+}
+
 .content {
 	position: absolute;
 	top: 0;
@@ -93,6 +98,7 @@ nav {
 	margin: auto;
 	position: absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
+	background-color: #f3f3f3;
 }
 
 .bg-content {
