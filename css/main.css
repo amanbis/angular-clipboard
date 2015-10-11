@@ -49,11 +49,22 @@ nav {
 .nav-icons li::before {
 	content: '';
 	display: block;
-	background: url("../img/icons/bg.svg") no-repeat center center;
 	width: 45px;
 	height: 45px;
 	margin: 0 auto;
 	margin-bottom: 0.75em;
+}
+
+.nav-icons a:nth-child(1) li::before {
+	background: url("../img/icons/add.svg") no-repeat center center;
+}
+
+.nav-icons a:nth-child(2) li::before {
+	background: url("../img/icons/bg.svg") no-repeat center center;
+}
+
+.nav-icons a:nth-child(3) li::before {
+	background: url("../img/icons/info.svg") no-repeat center center;
 }
 
 .content {
@@ -69,7 +80,7 @@ nav {
 .title {
 	width: 100%;
 	height: 4em;
-	background-color: rgba(249, 249, 249, 0.75);
+	background-color: rgba(249, 249, 249, 0.95);
 }
 
 .modal-bg {

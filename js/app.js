@@ -11,6 +11,9 @@
 		this.tab = 1;
 		this.newList = {};
 
+		this.background = 'bamboo';
+		this.color = '';
+
 		this.selectTab = function(setTab) {
 			this.tab = setTab;
 		};
@@ -99,6 +102,10 @@
 			list.tasks.push(complete);
 			list.completed.splice(index, 1);
 			console.log(list.tasks);
+		};
+
+		this.setTheme = function(bg) {
+			this.background = bg;
 		};
 
 		this.selectTask = {
