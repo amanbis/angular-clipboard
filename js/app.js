@@ -1,7 +1,7 @@
 (function() {
 	var app = angular.module('clipboard', []);
 
-	app.controller('MainController', function() {
+	app.controller('MainController', ['$scope', function($scope) {
 		this.list = lists;
 		this.newTitle = '';
 		this.newTask = '';
@@ -11,8 +11,11 @@
 		this.tab = 1;
 		this.newList = {};
 
-		this.background = 'bamboo';
-		this.color = '';
+		$scope.theme = {
+			bgImg: 'bamboo',
+			colorLight: {hex: '', rgba: ''},
+			colorDark: {hex: '', rgba: ''} 
+		};
 
 		this.selectTab = function(setTab) {
 			this.tab = setTab;
@@ -112,7 +115,7 @@
 			checked: {},
 			taskDesc: {}
 		};
-	});
+	}]);
 
 	var lists = { 
 		title: 'Hi',
