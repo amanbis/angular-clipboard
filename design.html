@@ -28,13 +28,13 @@
 			</nav>
 		
 			<div class="content" ng-class="theme.bgImg">
-				<div class="title"></div>
+				<div ng-style="theme.colorRGBA" class="title">{{theme.colorRGBA}}</div>
 			</div>
 
 			<div id="open-bg" class="modal-bg">
 				<div class="bg-container">
 					<div class="bg-content">
-						<button ng-click="mainCtrl.setTheme('bamboo')">Bamboo</button>
+						<button ng-click="mainCtrl.setTheme('bamboo', '90, 114, 91', '58, 74, 43')">Bamboo</button>
 						<button ng-click="mainCtrl.setTheme('fields')">Fields</button>
 						<button ng-click="mainCtrl.setTheme('mountains')">Mountains</button>
 						<button ng-click="mainCtrl.setTheme('sky')">Sky</button>

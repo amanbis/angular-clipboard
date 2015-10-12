@@ -13,8 +13,8 @@
 
 		$scope.theme = {
 			bgImg: 'bamboo',
-			colorLight: {hex: '', rgba: ''},
-			colorDark: {hex: '', rgba: ''} 
+			color: { light: '90, 114, 91', dark: '58, 74, 43'},
+			colorRGBA: {'background-color':'rgba(90, 114, 91, 0.95)'}
 		};
 
 		this.selectTab = function(setTab) {
@@ -107,8 +107,8 @@
 			console.log(list.tasks);
 		};
 
-		this.setTheme = function(bg) {
-			this.background = bg;
+		this.setTheme = function(bg, light, dark) {
+			$scope.theme.bgImg = bg;
 		};
 
 		this.selectTask = {
