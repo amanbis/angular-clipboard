@@ -16,7 +16,7 @@
 	<body ng-controller="MainController as mainCtrl">
 		<div class="main">
 			<nav>
-				<div class="name"></div>
+				<div ng-style="{'background-color':theme.colorRGB.dark}" class="name"></div>
 
 				<div class="bottom-nav">
 					<ul class="nav-icons">
@@ -34,11 +34,11 @@
 			<div id="open-bg" class="modal-bg">
 				<div class="bg-container">
 					<div class="bg-content">
-						<button ng-click="mainCtrl.setTheme('bamboo', '90, 114, 91', '58, 74, 43')">Bamboo</button>
-						<button ng-click="mainCtrl.setTheme('fields')">Fields</button>
-						<button ng-click="mainCtrl.setTheme('mountains')">Mountains</button>
-						<button ng-click="mainCtrl.setTheme('sky')">Sky</button>
-						<button ng-click="mainCtrl.setTheme('tree')">Tree</button>
+						<button ng-click="mainCtrl.setTheme('bamboo', '142, 168, 134', '119, 139, 113')">Bamboo</button>
+						<button ng-click="mainCtrl.setTheme('fields', '255, 216, 117', '250, 190, 40')">Fields</button>
+						<button ng-click="mainCtrl.setTheme('mountains', '199, 185, 197', '71, 45, 68')">Mountains</button>
+						<button ng-click="mainCtrl.setTheme('sky', '137, 158, 166', '89, 117, 129')">Sky</button>
+						<button ng-click="mainCtrl.setTheme('cliffs', '78, 85, 100', '44, 48, 56')">Cliffs</button>
 						<a href="#close">Close</a>
 					</div>
 				</div>
