@@ -6,6 +6,10 @@ html, body {
   height: 100%;
 }
 
+.name, .title, .content {
+	transition: background 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
 .main {
 	position: relative;
 	width: 100%;
@@ -73,8 +77,6 @@ nav {
 	right: 0;
 	width: 75%;
 	height: 100%;
-
-	transition: background 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
 .title {
