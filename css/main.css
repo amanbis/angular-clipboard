@@ -6,6 +6,10 @@ html, body {
   height: 100%;
 }
 
+h1 {
+	color: #FFF;
+}
+
 .name, .title, .content {
 	transition: background 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
@@ -111,6 +115,7 @@ nav {
 	margin: auto;
 	position: absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
+	border: 1px solid;
 	background-color: #f3f3f3;
 }
 

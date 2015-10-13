@@ -16,7 +16,7 @@
 	<body ng-controller="MainController as mainCtrl">
 		<div class="main">
 			<nav>
-				<div ng-style="{'background-color':theme.colorRGB.dark}" class="name"></div>
+				<div ng-style="{'background-color':theme.colorRGB.dark}" class="name"><h1>Clipboard</h1></div>
 
 				<div class="bottom-nav">
 					<ul class="nav-icons">
@@ -28,11 +28,11 @@
 			</nav>
 		
 			<div class="content" ng-class="theme.bgImg">
-				<div ng-style="{'background-color':theme.colorRGBA.light}" class="title"></div>
+				<div ng-style="{'background-color':theme.colorRGBA.light}" class="title"><h1>Lis Totle</h1></div>
 			</div>
 
 			<div id="open-bg" class="modal-bg">
-				<div class="bg-container">
+				<div ng-style="{'border-color':theme.colorRGB.dark}" class="bg-container">
 					<div class="bg-content">
 						<button ng-click="mainCtrl.setTheme('bamboo', '142, 168, 134', '119, 139, 113')">Bamboo</button>
 						<button ng-click="mainCtrl.setTheme('fields', '255, 216, 117', '250, 190, 40')">Fields</button>
