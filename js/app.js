@@ -14,7 +14,7 @@
 		$scope.theme = {
 			bgImg: 'bamboo',
 			color: { light: '90, 114, 91', dark: '58, 74, 43'},
-			colorRGBA: {'background-color':'rgba(90, 114, 91, 0.95)'}
+			colorRGBA: { light: 'rgba(90, 114, 91, 0.95)', dark: 'rgba(58, 74, 43, 0.95)'}
 		};
 
 		this.selectTab = function(setTab) {
