@@ -20,9 +20,15 @@
 
 				<div class="bottom-nav">
 					<ul class="nav-icons">
-						<a href="#"><li>Add</li></a>
-						<a href="#open-bg"><li>Theme</li></a>
-						<a href="#"><li>Info</li></a>
+						<a ng-style="{'color':theme.colorRGB.dark}" href="#">
+							<li><div ng-style="{'background-color':theme.colorRGBA.dark}" class="icon"></div><p>Add</p></li>
+						</a>
+						<a ng-style="{'color':theme.colorRGB.dark}" href="#open-bg">
+							<li><div ng-style="{'background-color':theme.colorRGBA.dark}" class="icon"></div><p>Theme</p></li>
+						</a>
+						<a ng-style="{'color':theme.colorRGB.dark}" href="#">
+							<li><div ng-style="{'background-color':theme.colorRGBA.dark}" class="icon"></div><p>Info</p></li>
+						</a>
 					</ul>
 				</div>
 			</nav>
