@@ -107,8 +107,7 @@
 			console.log(list.tasks);
 		};
 
-		this.setTheme = function(bg, light, dark) {
-			$scope.theme.bgImg = bg;
+		$scope.setTheme = function(light, dark) {
 			$scope.theme.colorRGB.light = 'rgb(' + light + ')';
 			$scope.theme.colorRGB.dark = 'rgb(' + dark + ')';
 			$scope.theme.colorRGBA.light = 'rgba(' + light + ', 0.95)';

@@ -41,11 +41,13 @@
 			<div id="open-bg" class="modal-bg">
 				<div ng-style="{'border-color':theme.colorRGB.dark}" class="bg-container">
 					<div class="bg-content">
-						<button ng-click="mainCtrl.setTheme('bamboo', '142, 168, 134', '119, 139, 113')">Bamboo</button>
-						<button ng-click="mainCtrl.setTheme('fields', '255, 216, 117', '250, 190, 40')">Fields</button>
-						<button ng-click="mainCtrl.setTheme('mountains', '199, 185, 197', '71, 45, 68')">Mountains</button>
-						<button ng-click="mainCtrl.setTheme('sky', '137, 158, 166', '89, 117, 129')">Sky</button>
-						<button ng-click="mainCtrl.setTheme('cliffs', '78, 85, 100', '44, 48, 56')">Cliffs</button>
+						<form>
+							<input id="bamboo" type="radio" ng-model="theme.bgImg" ng-click="setTheme('142, 168, 134', '119, 139, 113')" value="bamboo" /><label for="bamboo">Bamboo</label><br />
+							<input id="fields" type="radio" ng-model="theme.bgImg" ng-click="setTheme('255, 216, 117', '250, 190, 40')" value="fields" /><label for="fields">Fields</label><br />
+							<input id="mountains" type="radio" ng-model="theme.bgImg" ng-click="setTheme('199, 185, 197', '71, 45, 68')" value="mountains" /><label for="mountains">Mountains</label><br />
+							<input id="sky" type="radio" ng-model="theme.bgImg" ng-click="setTheme('137, 158, 166', '89, 117, 129')" value="sky" /><label for="sky">Sky</label><br />
+							<input id="cliffs" type="radio" ng-model="theme.bgImg" ng-click="setTheme('78, 85, 100', '44, 48, 56')" value="cliffs" /><label for="cliffs">Cliffs</label><br />
+						</form>
 						<a href="#close">Close</a>
 					</div>
 				</div>
