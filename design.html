@@ -18,7 +18,11 @@
 		<div class="main">
 			<nav>
 				<div ng-style="{'background-color':theme.colorRGB.dark}" class="name"><h1>Clipboard</h1></div>
-
+				<div class="nav-list">
+					<ul>
+						<a ng-click="taskView = true" href="#"><li ng-style="{'background-color':theme.colorRGB.light}"></li></a>
+					</ul>
+				</div>
 				<div class="bottom-nav">
 					<ul class="nav-icons">
 						<a ng-style="{'color':theme.colorRGB.dark}" href="#">
@@ -34,7 +38,7 @@
 				</div>
 			</nav>
 		
-			<div class="content" ng-class="theme.bgImg">
+			<div class="content" ng-class="{ '{{theme.bgImg}}': theme.bgImg, 'visible': taskView }">
 				<div ng-style="{'background-color':theme.colorRGBA.light}" class="title"><h1>Lis Totle</h1></div>
 			</div>
 

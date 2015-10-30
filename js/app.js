@@ -11,6 +11,8 @@
 		this.tab = 1;
 		this.newList = {};
 
+		$scope.taskView = false;
+
 		$scope.theme = {
 			bgImg: 'bamboo',
 			colorRGB: { light: 'rgb(142, 168, 134)', dark: 'rgb(119, 139, 113)'},
