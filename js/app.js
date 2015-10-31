@@ -12,6 +12,7 @@
 		this.newList = {};
 
 		$scope.taskView = false;
+		$scope.bg = true;
 
 		$scope.theme = {
 			bgImg: 'bamboo',
