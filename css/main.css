@@ -46,7 +46,14 @@ nav {
 
 .nav-list ul li {
 	width: 100%;
-	height: 4em;
+	height: 6em;
+	border-bottom: 1.5px solid #f3f3f3;
+
+	transition: border 1s cubic-bezier(0.250, 0.460, 0.450, 0.940), background-color 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.nav-list ul li:hover {
+	background-color: #ececec;
 }
 
 .bottom-nav {
@@ -136,6 +143,14 @@ nav {
 	width: 100%;
 	height: 4em;
 	/*background-color: rgba(249, 249, 249, 0.95);*/
+}
+
+.back-btn {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url('../img/icons/back.svg') no-repeat center center;
+	background-size: 20px;
 }
 
 .modal-bg {
