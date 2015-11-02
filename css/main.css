@@ -39,9 +39,16 @@ nav {
 	background-color: #f8f8f8;
 }
 
-.name {
+.name-container {
+	display: table;
 	width: 100%;
 	height: 4em;
+}
+
+.name {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 2em;
 }
 
 .nav-list ul li {
@@ -139,18 +146,29 @@ nav {
 	height: 100%;
 }
 
-.title {
+.title-container {
+	display: table;
 	width: 100%;
 	height: 4em;
 	/*background-color: rgba(249, 249, 249, 0.95);*/
 }
 
+.title {
+	display: table-cell;
+	vertical-align: middle;
+}
+
 .back-btn {
 	display: inline-block;
-	width: 20px;
+	width: 40px;
 	height: 20px;
 	background: url('../img/icons/back.svg') no-repeat center center;
-	background-size: 20px;
+	background-size: 20px 20px;
+}
+
+.list-title {
+	display: inline-block;
+	line-height: 0;
 }
 
 .modal-bg {
