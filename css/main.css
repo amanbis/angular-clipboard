@@ -171,6 +171,25 @@ nav {
 	line-height: 0;
 }
 
+.task-input {
+	display: block;
+	width: 100%;
+}
+
+.task-input input[type="text"] {
+	display: block;
+	margin: 4em auto;
+	width: 90%;
+	font-size: 18px;
+	appearance: none;
+	box-shadow: none;
+	border-radius: none;
+}
+
+.task-input input[type="text"] {
+	outline: none;
+}
+
 .modal-bg {
 	position: fixed;
 	top: 0;

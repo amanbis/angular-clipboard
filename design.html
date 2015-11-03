@@ -45,12 +45,18 @@
 		
 			<div class="content" ng-class="{ 'visible': taskView }">
 				<div class="content-bg" ng-class="theme.bgImg">
+					
 					<div ng-style="{'background-color':theme.colorRGBA.light}" class="title-container">
 						<div class="title">
 							<a ng-click="taskView = false" href="#"><div class="back-btn"></div></a>
 							<h1 class="list-title">Lis Totle</h1>
 						</div>
 					</div>
+
+					<form class="task-input">
+						<input type="text">
+					</form>
+
 				</div>
 			</div>
 
