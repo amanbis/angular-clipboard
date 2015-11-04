@@ -180,14 +180,19 @@ nav {
 	display: block;
 	margin: 4em auto;
 	width: 90%;
+	height: 2em;
 	font-size: 18px;
 	appearance: none;
 	box-shadow: none;
 	border-radius: none;
+	border-bottom: solid 2px #c9c9c9;
+	transition: border 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
-.task-input input[type="text"] {
+.task-input input[type="text"]:focus,
+.task-input input[type="text"].focus {
 	outline: none;
+	border-bottom: solid 2px #969696;
 }
 
 .modal-bg {
