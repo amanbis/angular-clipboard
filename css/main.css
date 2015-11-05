@@ -16,7 +16,7 @@ ul {
 	padding: 0;
 }
 
-.name, .title, .icon, .nav-list li {
+.name-container, .title-container, .icon, .nav-list li, .theme-title {
 	transition: background-color 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
@@ -227,7 +227,7 @@ nav {
 }
 
 .theme-container {
-	width: 50%;
+	width: 25%;
 	height: 50%;
 	overflow: auto;
 	margin: auto;
@@ -241,6 +241,14 @@ nav {
 	box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1);
 
 	transition: border-color 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.theme-title {
+	padding: 1em;
+}
+
+.theme-options {
+	padding: 2em 1em;
 }
 
 /*.bg-content {
@@ -345,8 +353,8 @@ nav {
 
 h1 {
 	display: inline-block;
-	font-size: 2em;
-	line-height: 1.15;
+	/*font-size: 2em;
+	line-height: 1.15;*/
 }
 
 h3 {
