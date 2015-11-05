@@ -207,7 +207,7 @@ nav {
 	margin: 0 auto;
 }
 
-.modal-bg {
+.modal-theme {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -221,12 +221,12 @@ nav {
 	transition: opacity 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
-.modal-bg:target {
+.modal-theme:target {
 	opacity: 1;
 	pointer-events: auto;
 }
 
-.bg-container {
+.theme-container {
 	width: 50%;
 	height: 50%;
 	overflow: auto;

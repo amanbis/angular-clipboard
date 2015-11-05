@@ -33,7 +33,7 @@
 						<a ng-style="{'color':theme.colorRGB.dark}" href="#">
 							<li><div ng-style="{'background-color':theme.colorRGBA.dark}" class="icon"></div><p>Add</p></li>
 						</a>
-						<a ng-style="{'color':theme.colorRGB.dark}" href="#open-bg">
+						<a ng-style="{'color':theme.colorRGB.dark}" href="#theme">
 							<li><div ng-style="{'background-color':theme.colorRGBA.dark}" class="icon"></div><p>Theme</p></li>
 						</a>
 						<a ng-style="{'color':theme.colorRGB.dark}" href="#">
@@ -64,9 +64,10 @@
 				</div>
 			</div>
 
-			<div id="open-bg" class="modal-bg">
-				<div ng-style="{'border-color':theme.colorRGB.light}" class="bg-container">
-					<div class="bg-content">
+			<div id="theme" class="modal-theme">
+				<div ng-style="{'border-color':theme.colorRGB.light}" class="theme-container">
+					<div class="theme-content">
+						<div ng-style="{'background-color':theme.colorRGBA.dark}" class="theme-title"><h1>Change Theme</h1></div>
 						<form>
 							<input id="bamboo" type="radio" ng-model="theme.bgImg" ng-click="setTheme('142, 168, 134', '119, 139, 113')" value="bamboo" /><label for="bamboo">Bamboo</label><br />
 							<input id="fields" type="radio" ng-model="theme.bgImg" ng-click="setTheme('255, 216, 117', '250, 190, 40')" value="fields" /><label for="fields">Fields</label><br />
