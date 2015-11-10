@@ -8,7 +8,14 @@ html, body {
 }
 
 h1 {
-	color: #FFF;
+	display: inline-block;
+	color: #fff;
+	/*font-size: 2em;
+	line-height: 1.15;*/
+}
+
+h3 {
+	display: inline-block;
 }
 
 ul {
@@ -16,7 +23,7 @@ ul {
 	padding: 0;
 }
 
-.name, .title, .icon, .nav-list li {
+.name-container, .title-container, .icon, .nav-list li, .theme-title {
 	transition: background-color 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
@@ -207,7 +214,7 @@ nav {
 	margin: 0 auto;
 }
 
-.modal-bg {
+.modal-theme {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -221,12 +228,12 @@ nav {
 	transition: opacity 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
-.modal-bg:target {
+.modal-theme:target {
 	opacity: 1;
 	pointer-events: auto;
 }
 
-.bg-container {
+.theme-container {
 	width: 50%;
 	height: 50%;
 	overflow: auto;
@@ -241,6 +248,19 @@ nav {
 	box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1);
 
 	transition: border-color 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.theme-title {
+	padding: 1em;
+}
+
+.theme-title h1 {
+	color: #333333;
+	font-size: 1.5em;
+}
+
+.theme-options {
+	padding: 2em 1em;
 }
 
 /*.bg-content {
@@ -342,16 +362,6 @@ nav {
 
 
 
-
-h1 {
-	display: inline-block;
-	font-size: 2em;
-	line-height: 1.15;
-}
-
-h3 {
-	display: inline-block;
-}
 
 .active {
 	background-color: rgba(240,90,63,0.25);
