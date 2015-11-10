@@ -8,7 +8,14 @@ html, body {
 }
 
 h1 {
-	color: #FFF;
+	display: inline-block;
+	color: #fff;
+	/*font-size: 2em;
+	line-height: 1.15;*/
+}
+
+h3 {
+	display: inline-block;
 }
 
 ul {
@@ -227,7 +234,7 @@ nav {
 }
 
 .theme-container {
-	width: 25%;
+	width: 50%;
 	height: 50%;
 	overflow: auto;
 	margin: auto;
@@ -245,6 +252,11 @@ nav {
 
 .theme-title {
 	padding: 1em;
+}
+
+.theme-title h1 {
+	color: #333333;
+	font-size: 1.5em;
 }
 
 .theme-options {
@@ -350,16 +362,6 @@ nav {
 
 
 
-
-h1 {
-	display: inline-block;
-	/*font-size: 2em;
-	line-height: 1.15;*/
-}
-
-h3 {
-	display: inline-block;
-}
 
 .active {
 	background-color: rgba(240,90,63,0.25);
