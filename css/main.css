@@ -237,6 +237,7 @@ nav {
 	width: 75%;
 	overflow: auto;
 	margin: auto;
+	padding: 1em;
 	position: absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
 	border: 1.5px solid;
@@ -250,24 +251,16 @@ nav {
 }
 
 .theme {
-	height: 275px;
+	height: 250px;
 }
 
 .modal-title {
-	padding: 1em;
+	padding-bottom: 1em;
 }
 
 .modal-title h1 {
 	color: #333333;
 	font-size: 1.5em;
-}
-
-.theme-options {
-	padding: 0 1em;
-}
-
-.theme-options div {
-	margin-bottom: 0.75em;
 }
 
 .button-container {
@@ -278,9 +271,13 @@ nav {
 
 .button-container .button {
 	position: absolute;
-	right: 1em;
+	right: 0;
 	text-decoration: none;
 	padding: 0.75em 0.75em;
+}
+
+.theme-options div {
+	margin-bottom: 0.75em;
 }
 
 /*.bg-content {
