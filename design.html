@@ -30,7 +30,7 @@
 				</div>
 				<div class="bottom-nav">
 					<ul class="nav-icons">
-						<a ng-style="{'color':theme.colorRGB.dark}" href="#">
+						<a ng-style="{'color':theme.colorRGB.dark}" href="#new-list">
 							<li><div ng-style="{'background-color':theme.colorRGBA.dark}" class="icon"></div><p>Add</p></li>
 						</a>
 						<a ng-style="{'color':theme.colorRGB.dark}" href="#theme">
@@ -64,10 +64,10 @@
 				</div>
 			</div>
 
-			<div id="theme" class="modal-theme">
-				<div ng-style="{'border-color':theme.colorRGB.dark}" class="theme-container">
-					<div class="theme-content">
-						<div class="theme-title"><h1>Change Theme</h1></div>
+			<div id="theme" class="modal">
+				<div ng-style="{'border-color':theme.colorRGB.dark}" class="modal-container theme">
+					<div class="modal-content">
+						<div class="modal-title"><h1>Change Theme</h1></div>
 						<form class="theme-options">
 							<div><input id="bamboo" type="radio" ng-model="theme.bgImg" ng-click="setTheme('142, 168, 134', '119, 139, 113')" value="bamboo" /><label for="bamboo"> Bamboo</label></div>
 
@@ -79,11 +79,13 @@
 
 							<div><input id="cliffs" type="radio" ng-model="theme.bgImg" ng-click="setTheme('78, 85, 100', '44, 48, 56')" value="cliffs" /><label for="cliffs"> Cliffs</label></div>
 						</form>
-						<div class="button"><a ng-style="{'color':theme.colorRGBA.dark}" href="#close">DONE</a></div>
+						<div class="button-container"><a ng-style="{'color':theme.colorRGBA.dark}" class="button" href="#close">DONE</a></div>
 					</div>
 				</div>
 			</div>
 		</div>
+
+		
 
 		<script type="text/javascript" src="js/app.js"></script>
 	</body>
