@@ -235,7 +235,7 @@ nav {
 
 .theme-container {
 	width: 75%;
-	height: 35%;
+	height: 225px;
 	overflow: auto;
 	margin: auto;
 	position: absolute;
@@ -261,6 +261,7 @@ nav {
 
 .theme-options {
 	padding: 0 1em;
+	padding-bottom: 1em; 
 }
 
 /*.bg-content {
