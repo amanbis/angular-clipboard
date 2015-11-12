@@ -286,12 +286,16 @@ nav {
 	padding: 0.75em 0.75em;
 }
 
+.info {
+	height: 200px;
+}
+
 .theme {
 	height: 243px;
 }
 
 .theme-options div {
-	margin-bottom: 0.75em;
+	margin-bottom: 0.9em;
 }
 
 .new-list, .edit-list {
@@ -300,12 +304,16 @@ nav {
 
 .list-input {
 	margin-top: 1em;
-	margin-bottom: 3em;
+	margin-bottom: 3.75em;
 }
 
 .list-input input[type="text"] {
 	background-color: #f3f3f3;
 	width: 100%;
+}
+
+.new-list .button {
+	margin-left: 1em;
 }
 
 /*.bg-content {
