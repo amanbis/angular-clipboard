@@ -287,7 +287,11 @@ nav {
 }
 
 .info {
-	height: 300px;
+	height: 250px;
+}
+
+.info p {
+	margin-bottom: 2em;
 }
 
 .theme {
