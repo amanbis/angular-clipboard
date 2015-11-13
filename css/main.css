@@ -185,7 +185,7 @@ nav {
 .back-btn {
 	position: absolute;
 	left: 0;
-	width: 8%;
+	width: 15%;
 	height: 4em;
 	background: url('../img/icons/back.svg') no-repeat center center;
 	background-size: 20px 20px;
@@ -193,7 +193,7 @@ nav {
 
 .list-title {
 	display: block;
-	width: 85%;
+	width: 70%;
 	height: 100%;
 	margin: 0 auto;
 }
@@ -206,7 +206,7 @@ nav {
 .edit-btn {
 	position: absolute;
 	right: 0;
-	width: 8%;
+	width: 15%;
 	height: 4em;
 	background: url('../img/icons/edit.svg') no-repeat center center;
 	background-size: 20px 20px;
