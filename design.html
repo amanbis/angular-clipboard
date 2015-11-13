@@ -47,9 +47,10 @@
 				<div class="content-bg" ng-class="theme.bgImg">
 					
 					<div ng-style="{'background-color':theme.colorRGBA.light}" class="title-container">
-						<div class="title">
+						<div class="list-title">
 							<a ng-click="taskView = false" href="#"><div class="back-btn"></div></a>
-							<h1 class="list-title">Lis Totle</h1>
+							<h1>List Title</h1>
+							<a href="#edit-list"><div class="edit-btn"></div></a>
 						</div>
 					</div>
 
@@ -129,7 +130,13 @@
 						<form class="list-input" ng-submit="#">
 							<input type="text">
 						</form>
-						<div class="button-container"><a ng-style="{'color':theme.colorRGBA.dark}" class="button" href="#close">UPDATE</a></div>
+						<div class="button-container">
+							<div class="buttons">
+								<a class="button" href="#close">CANCEL</a>
+								<a ng-style="{'color':theme.colorRGBA.dark}" class="button" href="#close">DELETE</a>
+								<a ng-style="{'color':theme.colorRGBA.dark}" class="button" href="#close">UPDATE</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
