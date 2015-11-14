@@ -115,6 +115,12 @@
 						</div>
 					</div>
 
+					<div>
+						<a href="#new-task">
+							<div ng-style="{'background-color':theme.colorRGB.light}" class="task-icon"></div>
+						</a>
+					</div>
+
 				</div>
 			</div>
 
@@ -159,6 +165,24 @@
 		</div>
 
 		<div id="new-list" class="modal">
+				<div ng-style="{'border-color':theme.colorRGB.dark}" class="modal-container new-list">
+					<div class="modal-content">
+						<div class="modal-title"><h1>Add New List</h1></div>
+						<form class="list-input" ng-submit="#">
+							<input type="text">
+						</form>
+						<div class="button-container">
+							<div class="buttons">
+								<a class="button" href="#close">CANCEL</a>
+								<a ng-style="{'color':theme.colorRGBA.dark}" class="button" href="#close">ADD</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="new-task" class="modal">
 				<div ng-style="{'border-color':theme.colorRGB.dark}" class="modal-container new-list">
 					<div class="modal-content">
 						<div class="modal-title"><h1>Add New List</h1></div>
