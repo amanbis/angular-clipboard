@@ -97,7 +97,7 @@ nav {
 .nav-icons {
 	width: 100%;
 	margin: 0;
-	padding: 1.5em 0;
+	padding: 0.25em 0 0.5em 0;
 	background-color: #fff;
 }
 
@@ -120,7 +120,7 @@ nav {
 
 .icon {
 	border-radius: 50%;
-	margin: 1em auto;
+	margin: 0.75em auto;
 	width: 45px;
 	height: 45px;
 }
