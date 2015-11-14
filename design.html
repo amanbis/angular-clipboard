@@ -60,12 +60,53 @@
 
 					<div class="task-container">
 						<div class="current">
-							<form class="task">
-								<div class="checkbox"><input type="checkbox"></div>
-								<div class="task-content"><label>To do item</label></div>
+							<form>
+								<div class="task">
+									<div class="checkbox"><input type="checkbox"></div>
+									<a href="#edit-task"><div class="task-content"><label>To do item</label></div></a>
+								</div>
+								<div class="task">
+									<div class="checkbox"><input type="checkbox"></div>
+									<a href="#edit-task"><div class="task-content"><label>To do item</label></div></a>
+								</div>
+								<div class="task">
+									<div class="checkbox"><input type="checkbox"></div>
+									<a href="#edit-task"><div class="task-content"><label>To do item</label></div></a>
+								</div>
+								<div class="task">
+									<div class="checkbox"><input type="checkbox"></div>
+									<a href="#edit-task"><div class="task-content"><label>To do item</label></div></a>
+								</div>
+								<div class="task">
+									<div class="checkbox"><input type="checkbox"></div>
+									<a href="#edit-task"><div class="task-content"><label>To do item</label></div></a>
+								</div>
 							</form>
 						</div>
-						<div class="completed"></div>
+						<div class="completed">
+							<form>
+								<div class="task">
+									<div class="checkbox"><input type="checkbox"></div>
+									<a href="#edit-task"><div class="task-content"><label>To do item</label></div></a>
+								</div>
+								<div class="task">
+									<div class="checkbox"><input type="checkbox"></div>
+									<a href="#edit-task"><div class="task-content"><label>To do item</label></div></a>
+								</div>
+								<div class="task">
+									<div class="checkbox"><input type="checkbox"></div>
+									<a href="#edit-task"><div class="task-content"><label>To do item</label></div></a>
+								</div>
+								<div class="task">
+									<div class="checkbox"><input type="checkbox"></div>
+									<a href="#edit-task"><div class="task-content"><label>To do item</label></div></a>
+								</div>
+								<div class="task">
+									<div class="checkbox"><input type="checkbox"></div>
+									<a href="#edit-task"><div class="task-content"><label>To do item</label></div></a>
+								</div>
+							</form>
+						</div>
 					</div>
 
 				</div>
@@ -130,6 +171,25 @@
 		</div>
 
 		<div id="edit-list" class="modal">
+				<div ng-style="{'border-color':theme.colorRGB.dark}" class="modal-container edit-list">
+					<div class="modal-content">
+						<div class="modal-title"><h1>Edit List</h1></div>
+						<form class="list-input" ng-submit="#">
+							<input type="text">
+						</form>
+						<div class="button-container">
+							<div class="buttons">
+								<a class="button" href="#close">CANCEL</a>
+								<a ng-style="{'color':theme.colorRGBA.dark}" class="button" href="#close">DELETE</a>
+								<a ng-style="{'color':theme.colorRGBA.dark}" class="button" href="#close">UPDATE</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="edit-task" class="modal">
 				<div ng-style="{'border-color':theme.colorRGB.dark}" class="modal-container edit-list">
 					<div class="modal-content">
 						<div class="modal-title"><h1>Edit List</h1></div>
