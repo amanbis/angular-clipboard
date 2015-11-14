@@ -264,6 +264,7 @@ nav {
 	display: inline-block;
 	width: 85%;
 	height: 100%;
+	background: #fff;
 }
 
 .task-content label {
