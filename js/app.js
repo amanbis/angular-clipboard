@@ -7,8 +7,8 @@
 		this.newTask = '';
 		this.taskID = 9;
 
-		this.checklist = checklists;
-		this.tab = 1;
+		$scope.checklist = checklists;
+		$scope.tab = 1;
 		this.newList = {};
 
 		$scope.taskView = false;
@@ -20,12 +20,14 @@
 			colorRGBA: { light: 'rgba(142, 168, 134, 0.95)', dark: 'rgba(119, 139, 113, 0.95)'}
 		};
 
-		this.selectTab = function(setTab) {
-			this.tab = setTab;
+		$scope.selectTab = function(setTab) {
+			$scope.tab = setTab;
+			$scope.taskView = true;
+			console.log($scope.tab);
 		};
 
-		this.isSelected = function(checkTab) {
-			return this.tab === checkTab;
+		$scope.isSelected = function(checkTab) {
+			return $scope.tab === checkTab;
 		};
 
 		this.addList = function() {
