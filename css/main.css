@@ -198,9 +198,9 @@ nav {
 	margin: 0 auto;
 }
 
-.list-title h1 {
+.list-title .title {
 	position: absolute;
-	top: 0.27em;
+	top: 0.5em;
 }
 
 .edit-btn {
