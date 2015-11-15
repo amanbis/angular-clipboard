@@ -18,33 +18,31 @@
 		<div class="main">
 
 			<nav>
-				<div ng-style="{'background-color':theme.colorRGB.dark}" class="name-container">
-					<div class="name">
-						<div class="app-icon"></div>
-						<h1>Clipboard</h1>
+				<div class="nav-container">
+					<div ng-style="{'background-color':theme.colorRGB.dark}" class="name-container">
+						<div ng-style="{'background-color':theme.colorRGB.dark}" class="name-container">
+							<div class="name">
+								<div class="app-icon"></div>
+								<h1>Clipboard</h1>
+								<a href="#options-menu"><div class="options-icon"></div></a>
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="nav-list">
-					<ul>
-						<a ng-click="selectTab(list)" ng-repeat="list in checklist track by $index" href="#">
-							<li ng-style="{'border-color':theme.colorRGB.light}" class="list-item">
-								<h2>{{ list.title }}</h2>
-							</li>
+
+					<div class="nav-list">
+						<ul>
+							<a ng-click="selectTab(list)" ng-repeat="list in checklist track by $index" href="#">
+								<li ng-style="{'border-color':theme.colorRGB.light}" class="list-item">
+									<h2>{{ list.title }}</h2>
+								</li>
+							</a>
+						</ul>
+					</div>
+					<div>
+						<a href="#new-list">
+							<div ng-style="{'background-color':theme.colorRGB.light}" class="list-icon"></div>
 						</a>
-					</ul>
-				</div>
-				<div class="bottom-nav">
-					<ul class="nav-icons">
-						<a ng-style="{'color':theme.colorRGB.dark}" href="#new-list">
-							<li><div ng-style="{'background-color':theme.colorRGB.dark}" class="icon"></div><p>Add</p></li>
-						</a>
-						<a ng-style="{'color':theme.colorRGB.dark}" href="#theme">
-							<li><div ng-style="{'background-color':theme.colorRGB.dark}" class="icon"></div><p>Theme</p></li>
-						</a>
-						<a ng-style="{'color':theme.colorRGB.dark}" href="#info">
-							<li><div ng-style="{'background-color':theme.colorRGB.dark}" class="icon"></div><p>Info</p></li>
-						</a>
-					</ul>
+					</div>
 				</div>
 			</nav>
 		
@@ -88,6 +86,22 @@
 						</a>
 					</div>
 
+				</div>
+			</div>
+
+			<div id="options-menu" class="modal">
+				<div class="options-menu">
+					<ul>
+						<a href="#theme"><li>
+							<p>Change Theme</p>
+						</li></a>
+						<a href="#info"><li>
+							<p>About Clipboard</p>
+						</li></a>
+						<a href="#close"><li>
+							<p>Close</p>
+						</li></a>
+					</ul>
 				</div>
 			</div>
 
