@@ -84,6 +84,16 @@ nav {
 	padding: 0 2em;
 }
 
+.app-icon {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 0.5em; 
+	background: url('../img/icons/check.svg') no-repeat center center;
+	background-size: 20px 20px;
+
+}
+
 .nav-list {
 	height: 100%;
 	overflow-x: hidden;
