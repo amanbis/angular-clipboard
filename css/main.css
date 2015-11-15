@@ -46,8 +46,6 @@ input[type="text"] {
 
 input[type="text"]:focus,
 input[type="text"].focus {
-	outline: none;
-	border-bottom: solid 2px #969696;
 }
 
 .name-container, .title-container, .icon, .nav-list li, .theme-title {
@@ -405,6 +403,8 @@ nav {
 	top: 0; left: 0; bottom: 0; right: 0;
 }*/
 
+/* Background for Content View */
+
 .bamboo {
 	background: #f9f9f9 url("../img/bamboo.jpg") no-repeat center;
 	background-size: cover;
@@ -428,6 +428,33 @@ nav {
 .cliffs {
 	background: #f9f9f9 url("../img/cliffs.jpg") no-repeat center;
 	background-size: cover;
+}
+
+/* Focus for Text Input Border */
+
+.bamboo-input:focus {
+	outline: none;
+	border-bottom: solid 2px rgb(119, 139, 113);
+}
+
+.fields-input:focus {
+	outline: none;
+	border-bottom: solid 2px rgb(250, 190, 40);
+}
+
+.mountains-input:focus {
+	outline: none;
+	border-bottom: solid 2px rgb(71, 45, 68);
+}
+
+.sky-input:focus {
+	outline: none;
+	border-bottom: solid 2px rgb(89, 117, 129);
+}
+
+.cliffs-input:focus {
+	outline: none;
+	border-bottom: solid 2px rgb(44, 48, 56);
 }
 
 
