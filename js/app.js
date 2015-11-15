@@ -49,29 +49,30 @@
 			console.log($scope.checklist);
 		};
 
-		this.addTitle = function(listObj) {
-			listObj.title = this.newTitle;
-			listObj.active = true;
-			this.newTitle = "";
+		$scope.editTitle = function() {
+			$scope.newTitle = $scope.tempList.title;
 		};
 
-		this.editTitle = function(listObj) {
-			this.newTitle = listObj.title;
-			listObj.active = false;
+		$scope.updateTitle = function() {
+			$scope.tempList.title = $scope.newTitle;
+			$scope.newTitle = "";
 		};
 
-		this.removeList = function(list) {
-			var index = this.checklist.indexOf(list);
-			this.checklist.splice(index, 1);
+		$scope.deleteList = function() {
+			$scope.taskView = false;
+			var index = $scope.checklist.indexOf($scope.tempList);
+			$scope.checklist.splice(index, 1);
 
-			for(var i = index; i < this.checklist.length; i++) {
-				var newID = this.checklist[i].id;
-				this.checklist[i].id = newID - 1;
+			for(var i = index; i < $scope.checklist.length; i++) {
+				var newID = $scope.checklist[i].id;
+				$scope.checklist[i].id = newID - 1;
 			}
 
-			if (this.tab > this.checklist.length) {
-				this.tab = this.tab - 1;
+			if ($scope.tab > $scope.checklist.length) {
+				$scope.tab = $scope.tab - 1;
 			}
+
+			$scope.newTitle = "";
 		};
 
 		$scope.addTask = function() {
@@ -89,7 +90,7 @@
 			task.active = false;
 		};
 
-		this.setTaskEdit = function(task) {
+		this.updateTask = function(task) {
 			task.description = this.selectTask.taskDesc[task.id];
 			task.active = true;
 		};
@@ -117,6 +118,11 @@
 			console.log(list.tasks);
 		};
 
+		$scope.reset = function() {
+			$scope.newTitle = '';
+			$scope.newTask = '';
+		};
+
 		$scope.setTheme = function(light, dark) {
 			$scope.theme.bgColor = $scope.theme.bgImg + '-color';
 			$scope.theme.inputBorder = $scope.theme.bgImg + '-input';
@@ -126,7 +132,7 @@
 			$scope.theme.colorRGBA.dark = 'rgba(' + dark + ', 0.95)';
 		};
 
-		this.selectTask = {
+		$scope.selectTask = {
 			checked: {},
 			taskDesc: {}
 		};
