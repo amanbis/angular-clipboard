@@ -67,7 +67,7 @@
 						<div class="current">
 							<form>
 								<div ng-repeat="task in list.tasks track by $index" class="task">
-									<div class="checkbox"><input ng-model="selectTask.checked[task.id]" type="checkbox"></div>
+									<div class="checkbox"><input ng-model="selectTask.checked[task.id]" ng-click="completeTask(task)" type="checkbox"></div>
 									<a ng-click="editTask(list.tasks, task)" href="#edit-task"><div class="task-content"><label>{{ task.description }}</label></div></a>
 								</div>
 							</form>
@@ -75,8 +75,8 @@
 						<div class="completed">
 							<form>
 								<div ng-repeat="complete in list.completed track by $index" class="task">
-									<div class="checkbox"><input type="checkbox"></div>
-									<a href="#edit-task"><div class="task-content"><label>complete.description</label></div></a>
+									<div class="checkbox"><input ng-model="selectTask.checked[complete.id]" ng-click="undoComplete(complete)" type="checkbox"></div>
+									<a ng-click="editTask(list.completed, complete)" href="#edit-task"><div class="task-content"><label>{{ complete.description }}</label></div></a>
 								</div>
 							</form>
 						</div>

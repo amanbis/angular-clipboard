@@ -106,18 +106,18 @@
 			$scope.newTask = '';
 		};
 
-		this.completeTask = function(list, task) {
-			var index = list.tasks.indexOf(task);
-			list.completed.push(task);
-			list.tasks.splice(index, 1);
-			console.log(list.completed);
+		$scope.completeTask = function(task) {
+			var index = $scope.tempList.tasks.indexOf(task);
+			$scope.tempList.completed.push(task);
+			$scope.tempList.tasks.splice(index, 1);
+			console.log($scope.tempList.completed);
 		};
 
-		this.undoComplete = function(list, complete) {
-			var index = list.completed.indexOf(complete);
-			list.tasks.push(complete);
-			list.completed.splice(index, 1);
-			console.log(list.tasks);
+		$scope.undoComplete = function(task) {
+			var index = $scope.tempList.completed.indexOf(task);
+			$scope.tempList.tasks.push(task);
+			$scope.tempList.completed.splice(index, 1);
+			console.log($scope.tempList.tasks);
 		};
 
 		$scope.reset = function() {
