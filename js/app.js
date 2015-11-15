@@ -9,6 +9,8 @@
 
 		$scope.checklist = checklists;
 		$scope.tempList = $scope.checklist[0];
+		$scope.tempTaskList = [];
+		$scope.tempTask = {};
 		$scope.tab = 1;
 		$scope.newList = {};
 
@@ -85,23 +87,23 @@
 			console.log(item);
 		};
 
-		this.editTask = function(task) {
-			this.selectTask.taskDesc[task.id] = task.description;
-			task.active = false;
+		$scope.editTask = function(taskList, task) {
+			$scope.tempTaskList = taskList;
+			$scope.tempTask = task;
+			$scope.newTask = task.description;
+			/*this.selectTask.taskDesc[task.id] = task.description;
+			task.active = false;*/
 		};
 
-		this.updateTask = function(task) {
-			task.description = this.selectTask.taskDesc[task.id];
-			task.active = true;
+		$scope.updateTask = function() {
+			$scope.tempTask.description = $scope.newTask;
+			$scope.newTask = '';
 		};
 
-		this.cancelTaskEdit = function(task) {
-			task.active = true;
-		};
-
-		this.removeTask = function(list, task) {
-			var index = list.tasks.indexOf(task);
-			list.tasks.splice(index, 1);
+		$scope.deleteTask = function() {
+			var index = $scope.tempTaskList.indexOf($scope.tempTask);
+			$scope.tempTaskList.splice(index, 1);
+			$scope.newTask = '';
 		};
 
 		this.completeTask = function(list, task) {

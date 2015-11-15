@@ -408,6 +408,15 @@ nav {
 	width: 100%;
 }
 
+.delete {
+	height: 135px;
+}
+
+.delete p {
+	margin: 0;
+	margin-bottom: 1.75em;
+}
+
 /*.new-list .button, .edit-list .button {
 	margin-left: 1em;
 }*/
