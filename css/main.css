@@ -459,7 +459,7 @@ nav {
 
 /* Focus State for List and Task items */
 
-a:active .bamboo-color {
+a:focus:active .bamboo-color {
 	color: #fff;
 	background-color: rgba(142, 168, 134, 0.95);
 }
