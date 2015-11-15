@@ -430,7 +430,7 @@ nav {
 	background-size: cover;
 }
 
-/* Focus for Text Input Border */
+/* Focus State for Text Input Border */
 
 .bamboo-input:focus {
 	outline: none;
@@ -457,6 +457,32 @@ nav {
 	border-bottom: solid 2px rgb(44, 48, 56);
 }
 
+/* Focus State for List and Task items */
+
+a:active .bamboo-color {
+	color: #fff;
+	background-color: rgba(142, 168, 134, 0.95);
+}
+
+.fields-color:focus, .fields-color:active {
+	color: #fff;
+	background-color: rgba(255, 216, 117, 0.95);
+}
+
+.mountains-color:focus, .mountains-color:active {
+	color: #fff;
+	background-color: rgba(199, 185, 197, 0.95);
+}
+
+.sky-color:focus, .sky-color:active {
+	color: #fff;
+	background-color: rgba(137, 158, 166, 0.95);
+}
+
+.cliffs-color:focus, .cliffs-color:active {
+	color: #fff;
+	background-color: rgba(78, 85, 100, 0.95);
+}
 
 
 @media only screen and (min-width: 1280px) {

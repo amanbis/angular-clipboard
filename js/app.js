@@ -16,6 +16,7 @@
 
 		$scope.theme = {
 			bgImg: 'bamboo',
+			bgColor: 'bamboo-color',
 			inputBorder: 'bamboo-input',
 			colorRGB: { light: 'rgb(142, 168, 134)', dark: 'rgb(119, 139, 113)'},
 			colorRGBA: { light: 'rgba(142, 168, 134, 0.95)', dark: 'rgba(119, 139, 113, 0.95)'}
@@ -114,8 +115,8 @@
 		};
 
 		$scope.setTheme = function(light, dark) {
+			$scope.theme.bgColor = $scope.theme.bgImg + '-color';
 			$scope.theme.inputBorder = $scope.theme.bgImg + '-input';
-			console.log($scope.theme.inputBorder);
 			$scope.theme.colorRGB.light = 'rgb(' + light + ')';
 			$scope.theme.colorRGB.dark = 'rgb(' + dark + ')';
 			$scope.theme.colorRGBA.light = 'rgba(' + light + ', 0.95)';
