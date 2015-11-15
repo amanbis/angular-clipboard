@@ -18,7 +18,7 @@ a, a:focus {
 
 h1 {
 	display: inline-block;
-	color: #fff;
+	color: #f3f3f3;
 	/*font-size: 2em;
 	line-height: 1.15;*/
 }
@@ -106,6 +106,14 @@ nav {
 	border-bottom: 1.5px solid #f3f3f3;
 
 	transition: border 1s cubic-bezier(0.250, 0.460, 0.450, 0.940), background-color 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.list-item h2, .list-item p {
+	display: inline-block;
+}
+
+.list-item h2 {
+	font-size: 1.25em;
 }
 
 /*.nav-list ul li:hover {

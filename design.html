@@ -26,19 +26,23 @@
 				</div>
 				<div class="nav-list">
 					<ul>
-						<a ng-click="selectTab(list.id)" ng-repeat="list in checklist" href="#"><li ng-style="{'border-color':theme.colorRGB.light}" class="list-item">{{ list.title }}</li></a>
+						<a ng-click="selectTab(list)" ng-repeat="list in checklist track by $index" href="#">
+							<li ng-style="{'border-color':theme.colorRGB.light}" class="list-item">
+								<h2>{{ list.title }}</h2>
+							</li>
+						</a>
 					</ul>
 				</div>
 				<div class="bottom-nav">
 					<ul class="nav-icons">
 						<a ng-style="{'color':theme.colorRGB.dark}" href="#new-list">
-							<li><div ng-style="{'background-color':theme.colorRGBA.dark}" class="icon"></div><p>Add</p></li>
+							<li><div ng-style="{'background-color':theme.colorRGB.dark}" class="icon"></div><p>Add</p></li>
 						</a>
 						<a ng-style="{'color':theme.colorRGB.dark}" href="#theme">
-							<li><div ng-style="{'background-color':theme.colorRGBA.dark}" class="icon"></div><p>Theme</p></li>
+							<li><div ng-style="{'background-color':theme.colorRGB.dark}" class="icon"></div><p>Theme</p></li>
 						</a>
 						<a ng-style="{'color':theme.colorRGB.dark}" href="#info">
-							<li><div ng-style="{'background-color':theme.colorRGBA.dark}" class="icon"></div><p>Info</p></li>
+							<li><div ng-style="{'background-color':theme.colorRGB.dark}" class="icon"></div><p>Info</p></li>
 						</a>
 					</ul>
 				</div>
@@ -50,7 +54,7 @@
 					<div ng-style="{'background-color':theme.colorRGB.light}" class="title-container">
 						<div class="list-title">
 							<a ng-click="taskView = false" href="#"><div class="back-btn"></div></a>
-							<div ng-repeat="list in checklist" class="title"><h1 ng-show="isSelected(list.id)">{{ list.title }}</h1></div>
+							<div ng-repeat="list in checklist track by $index" class="title"><h1 ng-show="isSelected(list.id)">{{ list.title }}</h1></div>
 							<a href="#edit-list"><div class="edit-btn"></div></a>
 						</div>
 					</div>
@@ -59,10 +63,10 @@
 						<input type="text">
 					</form>-->
 
-					<div ng-repeat="list in checklist" ng-show="isSelected(list.id)" class="task-container">
+					<div ng-repeat="list in checklist track by $index" ng-show="isSelected(list.id)" class="task-container">
 						<div class="current">
 							<form>
-								<div ng-repeat="task in list.tasks" class="task">
+								<div ng-repeat="task in list.tasks track by $index" class="task">
 									<div class="checkbox"><input type="checkbox"></div>
 									<a href="#edit-task"><div class="task-content"><label>{{ task.description }}</label></div></a>
 								</div>
@@ -70,7 +74,7 @@
 						</div>
 						<div class="completed">
 							<form>
-								<div ng-repeat="complete in list.completed" class="task">
+								<div ng-repeat="complete in list.completed track by $index" class="task">
 									<div class="checkbox"><input type="checkbox"></div>
 									<a href="#edit-task"><div class="task-content"><label>complete.description</label></div></a>
 								</div>
@@ -116,7 +120,7 @@
 				<div ng-style="{'border-color':theme.colorRGB.dark}" class="modal-container info">
 					<div class="modal-content">
 						<div class="modal-title"><h1>About Clipboard</h1></div>
-						<p>Clipboard is a simple productivity webapp to get stuff done. I've built it from the ground up in AngularJS. You can check out my other projects on <a ng-style="{'color':theme.colorRGB.light}" href="https://github.com/amanbis">GitHub</a> or on my personal <a ng-style="{'color':theme.colorRGB.light}" href="http://www.amanbiswas.com">website</a>.</p>
+						<p>Clipboard is a simple productivity webapp to get stuff done. I've built it from the ground up in AngularJS. You can check out my other projects on <a ng-style="{'color':theme.colorRGB.light}" target="_blank" href="https://github.com/amanbis">GitHub</a> or on my personal <a ng-style="{'color':theme.colorRGB.light}" target="_blank" href="http://www.amanbiswas.com">website</a>.</p>
 						<div class="button-container">
 							<div class="buttons">
 								<a ng-style="{'color':theme.colorRGB.dark}" class="button" href="#close">THANKS</a>
@@ -132,12 +136,12 @@
 					<div class="modal-content">
 						<div class="modal-title"><h1>Add New List</h1></div>
 						<form class="list-input" ng-submit="#">
-							<input ng-class="theme.inputBorder" type="text">
+							<input ng-model="newTitle" ng-class="theme.inputBorder" type="text" placeholder="Groceries, Quests, Deathclaw Gauntlet recipe...">
 						</form>
 						<div class="button-container">
 							<div class="buttons">
 								<a class="button" href="#close">CANCEL</a>
-								<a ng-style="{'color':theme.colorRGB.dark}" class="button" href="#close">ADD</a>
+								<a ng-click="addList()" ng-style="{'color':theme.colorRGB.dark}" class="button" href="#close">ADD</a>
 							</div>
 						</div>
 					</div>
@@ -148,14 +152,14 @@
 		<div id="new-task" class="modal">
 				<div ng-style="{'border-color':theme.colorRGB.dark}" class="modal-container new-list">
 					<div class="modal-content">
-						<div class="modal-title"><h1>Add New List</h1></div>
+						<div class="modal-title"><h1>Add New Task</h1></div>
 						<form class="list-input" ng-submit="#">
-							<input ng-class="theme.inputBorder" type="text">
+							<input ng-model="newTask" ng-class="theme.inputBorder" type="text" placeholder="E.g. Buy milk, Blow up star destroyer, Netflix and chill...">
 						</form>
 						<div class="button-container">
 							<div class="buttons">
 								<a class="button" href="#close">CANCEL</a>
-								<a ng-style="{'color':theme.colorRGB.dark}" class="button" href="#close">ADD</a>
+								<a ng-click="addTask()" ng-style="{'color':theme.colorRGB.dark}" class="button" href="#close">ADD</a>
 							</div>
 						</div>
 					</div>

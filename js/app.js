@@ -2,14 +2,15 @@
 	var app = angular.module('clipboard', []);
 
 	app.controller('MainController', ['$scope', function($scope) {
-		this.list = lists;
-		this.newTitle = '';
-		this.newTask = '';
-		this.taskID = 9;
+		/*this.list = lists;*/
+		$scope.newTitle = '';
+		$scope.newTask = '';
+		$scope.taskID = 9;
 
 		$scope.checklist = checklists;
+		$scope.tempList = $scope.checklist[0];
 		$scope.tab = 1;
-		this.newList = {};
+		$scope.newList = {};
 
 		$scope.taskView = false;
 		$scope.bg = true;
@@ -22,29 +23,30 @@
 			colorRGBA: { light: 'rgba(142, 168, 134, 0.95)', dark: 'rgba(119, 139, 113, 0.95)'}
 		};
 
-		$scope.selectTab = function(setTab) {
-			$scope.tab = setTab;
+		$scope.selectTab = function(list) {
+			$scope.tempList = list;
+			$scope.tab = list.id;
 			$scope.taskView = true;
-			console.log($scope.tab);
 		};
 
 		$scope.isSelected = function(checkTab) {
 			return $scope.tab === checkTab;
 		};
 
-		this.addList = function() {
-			this.newList = { 
-				id: 0,
-				title: "New List",
+		$scope.addList = function() {
+			$scope.newList = { 
+				id: $scope.checklist.length + 1,
+				title: $scope.newTitle,
 				tasks: [],
 				completed: [],
-				active: false
+				active: true
 			};
 
-			this.newList.id = this.checklist.length + 1;
-			this.checklist.push(this.newList);
-			this.selectTab(this.newList.id);
-			console.log(this.checklist);
+			/*this.newList.id = this.checklist.length + 1;*/
+			$scope.checklist.push($scope.newList);
+			$scope.selectTab($scope.newList);
+			$scope.newTitle = "";
+			console.log($scope.checklist);
 		};
 
 		this.addTitle = function(listObj) {
@@ -72,13 +74,14 @@
 			}
 		};
 
-		this.addTask = function(listObj) {
+		$scope.addTask = function() {
 			/*this.list.count++;
 			this.list.tasks['task' + this.list.count] = this.newTask;*/
-			this.taskID++;
-			var item = { id: this.taskID, description: this.newTask, active: true };
-			listObj.tasks.push(item);
-			this.newTask = '';
+			$scope.taskID++;
+			var item = { id: $scope.taskID, description: $scope.newTask, active: true };
+			$scope.tempList.tasks.push(item);
+			$scope.newTask = '';
+			console.log(item);
 		};
 
 		this.editTask = function(task) {
@@ -129,12 +132,12 @@
 		};
 	}]);
 
-	var lists = { 
+	/*var lists = { 
 		title: 'Hi',
 		tasks: {},
 		active: false,
 		count: 0
-	};
+	};*/
 
 	var checklists = [
 		{
