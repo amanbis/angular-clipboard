@@ -13,7 +13,6 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 	</head>
 	<body ng-controller="MainController as mainCtrl">
-<<<<<<< HEAD
 		<div class="main">
 
 			<nav>
@@ -142,19 +141,16 @@
 					</div>
 				</div>
 			</div>
-=======
 		<div class="tabs" ng-repeat="list in mainCtrl.checklist track by $index">
 			<li ng-class="{ active: mainCtrl.isSelected(list.id) }">
 				<a href="#" ng-click="mainCtrl.selectTab(list.id)"><h3>{{list.title}}</h3></a>
 				<button ng-click="mainCtrl.removeList(list)">x</button>
 			</li>
->>>>>>> parent of 60a7b4e... Make design.html into main index document
 		</div>
 
 		<li>
 			<a href="#" ng-click="mainCtrl.addList()"><h3>Create New List</h3></a>
 		</li>
-
 		<p>List tab: {{mainCtrl.tab}}</p>
 
 		<div ng-repeat="list in mainCtrl.checklist">
@@ -170,6 +166,20 @@
 					<button ng-click="mainCtrl.editTitle(list)">Edit</button>
 				</div>
 
+		<p>List tab: {{mainCtrl.tab}}</p>
+
+		<div ng-repeat="list in mainCtrl.checklist">
+			<div ng-show="mainCtrl.isSelected(list.id)">
+
+				<form class="title" ng-hide="list.active" ng-submit="mainCtrl.addTitle(list)">
+					<input ng-model="mainCtrl.newTitle" type="text" name="newTitle" placeholder="Add a title">
+					<input type="submit">
+				</form>
+				
+				<div ng-show="list.active">
+					<h1>{{list.title}}</h1>
+					<button ng-click="mainCtrl.editTitle(list)">Edit</button>
+				</div>
 				<form ng-submit="mainCtrl.addTask(list)">
 					<input ng-model="mainCtrl.newTask" type="text" name="newTask" placeholder="Add an item in {{list.title}}">
 					<input type="submit">
