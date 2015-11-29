@@ -15,6 +15,7 @@
 		$scope.newList = {};
 
 		$scope.taskView = false;
+		$scope.navView = false;
 		$scope.bg = true;
 
 		$scope.theme = {
@@ -133,6 +134,14 @@
 			$scope.theme.colorRGBA.light = 'rgba(' + light + ', 0.95)';
 			$scope.theme.colorRGBA.dark = 'rgba(' + dark + ', 0.95)';
 		};
+
+		$scope.navToggle = function() {
+			if($scope.navView) {
+				$scope.navView = false;
+			} else {
+				$scope.navView = true;
+			}
+		}
 
 		$scope.selectTask = {
 			checked: {},
